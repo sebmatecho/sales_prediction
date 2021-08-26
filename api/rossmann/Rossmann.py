@@ -3,16 +3,16 @@ import inflection
 import pandas as pd
 import numpy as np
 import math
-import datetime as dt
+import datetime
 
 class Rossmann(object):
     def __init__(self):
         self.home_path = 'C:\\Users\\Windows\\Google Drive\\DS em produccao'
-        self.competition_distance_scaler = pickle.load(open(self.home_path + 'parameter\\competition_distance_scaler.pkl','rb'))
-        self.competition_time_month_scaler = pickle.load(open(self.home_path + 'parameter\\competition_time_month_scaler.pkl','rb'))
-        self.promo_time_week_scaler = pickle.load(open(self.home_path + 'parameter\\promo_time_week_scaler.pkl','rb'))
-        self.year_scaler = pickle.load(open(self.home_path + 'parameter\\year_scaler.pkl','rb'))
-        self.store_type_scaler = pickle.load(open(self.home_path + 'parameter\\store_type_scaler.pkl','rb'))
+        self.competition_distance_scaler = pickle.load(open(self.home_path + '\\parameter\\competition_distance_scaler.pkl','rb'))
+        self.competition_time_month_scaler = pickle.load(open(self.home_path + '\\parameter\\competition_time_month_scaler.pkl','rb'))
+        self.promo_time_week_scaler = pickle.load(open(self.home_path + '\\parameter\\promo_time_week_scaler.pkl','rb'))
+        self.year_scaler = pickle.load(open(self.home_path + '\\parameter\\year_scaler.pkl','rb'))
+        self.store_type_scaler = pickle.load(open(self.home_path + '\\parameter\\store_type_scaler.pkl','rb'))
     def data_cleaning(self, df1): 
 
         ### Renaming columns
@@ -67,28 +67,28 @@ class Rossmann(object):
     
     def feature_engineering(self,df2):
         # year
-        df1['year'] = df1['date'].dt.year
+        df2['year'] = df2['date'].dt.year
         # month
-        df1['month'] = df1['date'].dt.month
+        df2['month'] = df2['date'].dt.month
         # day
-        df1['day'] = df1['date'].dt.day
+        df2['day'] = df2['date'].dt.day
         # week of the year
-        df1['week_of_year'] = df1['date'].dt.weekofyear
+        df2['week_of_year'] = df2['date'].dt.weekofyear
         # year week
-        df1['year_week'] = df1['date'].dt.strftime('%Y-%W')
+        df2['year_week'] = df2['date'].dt.strftime('%Y-%W')
 
         # competition since 
-        df1['competition_since'] = df1.apply(lambda x: datetime.datetime(year= x['competition_open_since_year'], month=x['competition_open_since_month'], day=1),axis=1)
-        df1['competition_time_month'] = ((df1['date']-df1['competition_since'])/30).apply(lambda x: x.days).astype(int)
+        df2["competition_since"] = df2.apply(lambda x: datetime.datetime(year = x["competition_open_since_year"], month = x["competition_open_since_month"], day = 1), axis = 1)
+        df2["competition_time_month"] = ((df2["date"] - df2["competition_since"]) / 30).apply(lambda x: x.days).astype(int)
 
         # promo since
-        df1['promo_since'] = df1['promo2_since_year'].astype(str) + '-' + df1['promo2_since_week'].astype(str)
-        df1['promo_since'] = df1['promo_since'].apply(lambda x: datetime.datetime.strptime(x+'-1','%Y-%W-%w') - datetime.timedelta(days= 7))
-        df1['promo_time_week'] = ((df1['date']-df1['promo_since'])/7).apply(lambda x: x.days).astype(int)
+        df2['promo_since'] = df2['promo2_since_year'].astype(str) + '-' + df2['promo2_since_week'].astype(str)
+        df2["promo_since"] = df2["promo_since"].apply(lambda x: datetime.datetime.strptime(x + '-1', '%Y-%W-%w' ) - datetime.timedelta(days=7))
+        df2['promo_time_week'] = ((df2['date']-df2['promo_since'])/7).apply(lambda x: x.days).astype(int)
         # assortment
-        df1['assortment'] = df1['assortment'].apply(lambda x: 'basic' if x =='a' else 'extra' if x == 'b' else 'extended')
+        df2['assortment'] = df2['assortment'].apply(lambda x: 'basic' if x =='a' else 'extra' if x == 'b' else 'extended')
         # state holiday
-        df1['state_holiday'] = df1['state_holiday'].apply(lambda x: 'public_holiday' if x =='a' else 'eastern_holiday' if x == 'b' else 'christimas' if x == 'c' else 'regular_day')
+        df2['state_holiday'] = df2['state_holiday'].apply(lambda x: 'public_holiday' if x =='a' else 'eastern_holiday' if x == 'b' else 'christimas' if x == 'c' else 'regular_day')
 
         ## Row filtering
 
