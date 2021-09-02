@@ -2,20 +2,20 @@
 
 This project was inspired by the Kaggle "Rossmann Store Sales" challenge (see https://www.kaggle.com/c/rossmann-store-sales). 
 
-# Problem to be solved 
+## Problem to be solved 
 
-# Used Approach
+## Used Approach
 
-# Data General Overview
+## Data General Overview
 
-# EDA and Insights Finding
+## EDA and Insights Finding
 
-# Data preparation (standardization and feature selection)
+## Data preparation (standardization and feature selection)
 
-# Machine learning modeling
+## Machine learning modeling
 
-# Hyperparameter tuning
+## Hyperparameter tuning
 
-# Business performance
+## Business performance
 
-# Model in production
+## Model in production
