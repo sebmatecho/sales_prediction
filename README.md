@@ -1,3 +1,3 @@
-# Sales Prediction
+# Rossmann stores - 6 weeks sales forecast
 
-This project aims to understand the disctintive features to predict sales (in construction) 
+This project was inspired by the Kaggle "Rossmann Store Sales" challenge (see https://www.kaggle.com/c/rossmann-store-sales). 
