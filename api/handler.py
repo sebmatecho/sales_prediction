@@ -1,5 +1,6 @@
 import pickle
 import pandas as pd
+import os
 from flask import Flask, request, Response
 from rossmann.Rossmann import Rossmann
 
@@ -46,4 +47,5 @@ def rossmann_predict():
         return Response('{}', status=200, mimetype='application/json')
 
 if __name__ == '__main__':
-    app.run('127.0.0.1')
+    port = os.environ.get('PORT', 5000)
+    app.run('127.0.0.1', port = port, debug=True)
