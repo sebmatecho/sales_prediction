@@ -20,4 +20,4 @@ This project was inspired by the Kaggle "Rossmann Store Sales" challenge (see ht
 
 ## Model in production
 
-<img src="bot.gif" width="300" height="600" />
+<img src="bot.gif" width="300" height="550" />
