@@ -19,3 +19,5 @@ This project was inspired by the Kaggle "Rossmann Store Sales" challenge (see ht
 ## Business performance
 
 ## Model in production
+
+![Alt Text](bot.gif)
