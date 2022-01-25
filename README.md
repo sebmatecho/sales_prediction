@@ -22,4 +22,4 @@ This project was inspired by the Kaggle "Rossmann Store Sales" challenge (see ht
 
 ![Alt Text](bot.gif)
 
-<img src="bot.gif" width="40" height="40" />
+<img src="bot.gif" width="200" height="400" />
