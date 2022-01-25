@@ -20,6 +20,4 @@ This project was inspired by the Kaggle "Rossmann Store Sales" challenge (see ht
 
 ## Model in production
 
-![Alt Text](bot.gif)
-
-<img src="bot.gif" width="200" height="400" />
+<img src="bot.gif" width="300" height="600" />
