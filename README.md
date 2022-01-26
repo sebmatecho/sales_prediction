@@ -28,9 +28,7 @@ As the main aim of the project is to provide forecasted values, not available fe
 
 ## EDA and Insights Finding
 
-Once some basic understanding of the data and the business problem were gained, an Exploratory Data Analysis (EDA) was performed. To provide a path for such EDA, some hypothesis were proposed.
-
-With the feature diagram above, several hypotheses were generated; the ones that were judged to be most relevant were selected (listed below) and then the EDA actually started. Among those, the following were studied during the EDA stage. 
+Once some basic understanding of the data and the business problem were gained (see figure below), an Exploratory Data Analysis (EDA) was performed. To provide a path for such EDA, some hypothesis were proposed, and listed below. 
 
 <img src="img/DAILY_SOTORE_SALES.png" width="400" height="400" />
 
