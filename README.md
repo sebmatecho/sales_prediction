@@ -1,6 +1,6 @@
 # Rossmann stores - 6 weeks sales forecast
 
-This project contains data shared by the Kaggle "Rossmann Store Sales" challenge, available (here)[https://www.kaggle.com/c/rossmann-store-sales)]
+This project contains data shared by the Kaggle "Rossmann Store Sales" challenge, available [here](https://www.kaggle.com/c/rossmann-store-sales)
 
 ## Problem to be solved 
 
