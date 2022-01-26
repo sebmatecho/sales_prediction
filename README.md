@@ -9,7 +9,7 @@ Rossmann operates over 3,000 drug stores in 7 European countries. Currently, Ros
 ## Used Approach
 
 An approach based on CRoss-Industry Standard Process for data mining (CRISP) was used. This is, 
-<img src="img/IBM.jpg" width="300" height="550" />
+<img src="img/IBM.jpg" width="300" height="300" />
 
 
 ## Data General Overview
