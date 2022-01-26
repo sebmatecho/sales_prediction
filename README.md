@@ -30,7 +30,7 @@ As the main aim of the project is to provide forecasted values, not available fe
 
 Once some basic understanding of the data and the business problem were gained (see figure below), an Exploratory Data Analysis (EDA) was performed. To provide a path for such EDA, some hypothesis were proposed, and listed below. 
 
-<img src="img/DAILY_SOTORE_SALES.png" width="400" height="400" />
+<img src="img/DAILY_SOTORE_SALES.png" width="500" height="400" />
 
 1. Stores with a larger assortment should sell more
 2. Stores with closer competitors should sell less
@@ -57,3 +57,5 @@ Once some basic understanding of the data and the business problem were gained (
 ## Model in production
 
 <img src="bot.gif" width="300" height="550" />
+
+chatbot id: @sebmatecho_bot
