@@ -32,7 +32,7 @@ Once some basic understanding of the data and the business problem were gained, 
 
 With the feature diagram above, several hypotheses were generated; the ones that were judged to be most relevant were selected (listed below) and then the EDA actually started. Among those, the following were studied during the EDA stage. 
 
-<img src="img/DAILY_SOTORE_SALES.png." width="400" height="400" />
+<img src="img/DAILY_SOTORE_SALES.png" width="400" height="400" />
 
 1. Stores with a larger assortment should sell more
 2. Stores with closer competitors should sell less
