@@ -63,13 +63,21 @@ Linear regression, Regularized linear regression - lasso, Random forest and XGBo
  Mean Absolute Error (MAE), Mean absolute percentage error (MAPE) and Root Mean Square Error (RMSE) results were:
 
 | Model | MAE |MAPE |RMSE |
-| --- | --- |
-|Random forest regressor | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
+| --- | --- | --- | --- |
+|Random forest regressor | 853.71 +/- 257.13	 |0.3 +/- 0.02|2952.52 +/- 468.37|
 |XGBoost regressor | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
-|Linear regression | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
-|Regularized linear regression | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
+|Linear regression | 2081.73 +/- 295.63 |0.3 +/- 0.02|	2952.52 +/- 468.37 |
+|Regularized linear regression | 2116.38 +/- 341.5	 |0.29 +/- 0.01	|3057.75 +/- 504.26 |
+
+Although the random forest model outperformed the other models, XGBoost was selected for further development (parameter tuning and deployment). The rationale behind this decision is based on the resources available for this project as XGBoost is considerably lighter and easier to implement in production than the random forest. 
 
 ## Hyperparameter tuning
+
+After selecting the XGBoost model, a random search procedure was implemented in order to get the best possible model out of the XGBoost category. For this, a grid of potential values for the parameter model (n_estimators, eta, max_depth, subsample, colsample_bytree and min_child_weight, see [here](https://xgboost.readthedocs.io/en/stable/parameter.html9) for more) was assessed. After a extensive search process, an adequate set of parameters was found and implemented. The final model displayed the following goodness of fit metrics. 
+
+| Model | MAE |MAPE |RMSE |
+| --- | --- | --- | --- |
+|XGBoost regressor  | 853.71 +/- 257.13	 |0.3 +/- 0.02|2952.52 +/- 468.37|
 
 ## Business performance
 
