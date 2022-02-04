@@ -48,7 +48,26 @@ Once some basic understanding of the data and the business problem were gained (
 
 ## Data preparation (standardization and feature selection)
 
+Once EDA was performed, some basic transformations were made in order to have better data to input into the models. Some of the big ideas in this phase: 
+- All information being imputed to the model is goint to be numerical, so the model optimization process would carry out. 
+- Selection on how to scale variables is based on the presence of outliers: Robust Scaler for variables displaying more and more extreme values and MinMax Scaler for other variables.
+- Variables referring to time such as day of week, week of year, etc, would be coded as a ciclycal variables using sin and cos. 
+- Response variable was transformed with a log() function. 
+- As no normal distribution was encounter, no standarization process was carried out. 
+
+Finally, for the feature selection, aside from the knwoledge gained in the EDA phase and hypothesis addressing process, Boruta algorithm was used (more information [here](https://towardsdatascience.com/boruta-explained-the-way-i-wish-someone-explained-it-to-me-4489d70e154a)). As Boruta algorith relies greatly on Random Forest, it might not be the fastest algorithm to be implemented, but it worth it as it provides a very reasonable set of variables intuitively assesed to be used. 
+
 ## Machine learning modeling
+Linear regression, Regularized linear regression - lasso, Random forest and XGBoost models were implemented and assessed based on a cross-validation approach (described [here](https://machinelearningmastery.com/k-fold-cross-validation/)). This is, all dataset is going to be split in 5 groups (each one containing 20% of the data) where each of the five iterations would have a different group as testing data while the remaining of the data would be training data. Goodness of fit metrics would be averaged to have a global metric of models. 
+
+ Mean Absolute Error (MAE), Mean absolute percentage error (MAPE) and Root Mean Square Error (RMSE) results were:
+
+| Model | MAE |MAPE |RMSE |
+| --- | --- |
+|Random forest regressor | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
+|XGBoost regressor | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
+|Linear regression | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
+|Regularized linear regression | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
 
 ## Hyperparameter tuning
 
