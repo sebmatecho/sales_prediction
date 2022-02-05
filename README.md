@@ -89,6 +89,7 @@ Now, considering the encountered limitations in tech resources, this iteration w
 Final model was deployed and can be accessed through a Telegram chatbot. Besides the trained model, the following were created: i) an object class (Rossmann) aimed to deal with the data processing pipeline, ii) an API handler to bridge the conextion between the classes and the chatbotand, and iii) an app to manage messages. All files were hosted on Heroku (https://www.heroku.com/).
 
 The following scheme represents all these files.
+
 <img src="bot.gif" width="300" height="550" />
 
 You are more than welcome to try it out! chatbot id: @sebmatecho_bot
