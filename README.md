@@ -64,7 +64,7 @@ Linear regression, Regularized linear regression - lasso, Random forest and XGBo
 
 | Model | MAE |MAPE |RMSE |
 | --- | --- | --- | --- |
-|Random forest regressor | 853.71 +/- 257.13	 |0.3 +/- 0.02|2952.52 +/- 468.37|
+|Random forest regressor | 	836.61 +/- 217.1	| 0.12 +/- 0.02|	1254.3 +/- 316.17|
 |XGBoost regressor | 853.71 +/- 257.13	 |0.12 +/- 0.03|1297.01 +/- 400.11 |
 |Linear regression | 2081.73 +/- 295.63 |0.3 +/- 0.02|	2952.52 +/- 468.37 |
 |Regularized linear regression | 2116.38 +/- 341.5	 |0.29 +/- 0.01	|3057.75 +/- 504.26 |
@@ -80,9 +80,15 @@ After selecting the XGBoost model, a random search procedure was implemented in 
 |XGBoost regressor  | 853.71 +/- 257.13	 |0.3 +/- 0.02|2952.52 +/- 468.37|
 
 ## Business performance
+Overall and based on the shape of error and further analysis made on the notebook, the model performed well. 
+
+As improvement is always achivable and using the CRISP approach, a new cycle including further ideas as new models, new measures, new features, etc., could be put in place. 
+Now, considering the encountered limitations in tech resources, this iteration will remain as final, at least for the time being. Heavy or lengthy solutions are not preferred, even if it performs exceptionally well. Such trade-off could be assessed with a company's management in order to scale solutions.
 
 ## Model in production
+Final model was deployed and can be accessed through a Telegram chatbot. Besides the trained model, the following were created: i) an object class (Rossmann) aimed to deal with the data processing pipeline, ii) an API handler to bridge the conextion between the classes and the chatbotand, and iii) an app to manage messages. All files were hosted on Heroku (https://www.heroku.com/).
 
+The following scheme represents all these files.
 <img src="bot.gif" width="300" height="550" />
 
-chatbot id: @sebmatecho_bot
+You are more than welcome to try it out! chatbot id: @sebmatecho_bot
