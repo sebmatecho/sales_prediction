@@ -57,7 +57,7 @@ Once EDA was performed, some basic transformations were made in order to have be
 
 Finally, for the feature selection, aside from the knwoledge gained in the EDA phase and hypothesis addressing process, Boruta algorithm was used (more information [here](https://towardsdatascience.com/boruta-explained-the-way-i-wish-someone-explained-it-to-me-4489d70e154a)). As Boruta algorith relies greatly on Random Forest, it might not be the fastest algorithm to be implemented, but it worth it as it provides a very reasonable set of variables intuitively assesed to be used. 
 
-## Machine learning modeling
+## Machine learning modelling
 Linear regression, Regularized linear regression - lasso, Random forest and XGBoost models were implemented and assessed based on a cross-validation approach (described [here](https://machinelearningmastery.com/k-fold-cross-validation/)). This is, all dataset is going to be split in 5 groups (each one containing 20% of the data) where each of the five iterations would have a different group as testing data while the remaining of the data would be training data. Goodness of fit metrics would be averaged to have a global metric of models. 
 
  Mean Absolute Error (MAE), Mean absolute percentage error (MAPE) and Root Mean Square Error (RMSE) results were:
@@ -89,6 +89,10 @@ Now, considering the encountered limitations in tech resources, this iteration w
 Final model was deployed and can be accessed through a Telegram chatbot. Besides the trained model, the following were created: i) an object class (Rossmann) aimed to deal with the data processing pipeline, ii) an API handler to bridge the conextion between the classes and the chatbotand, and iii) an app to manage messages. All files were hosted on Heroku (https://www.heroku.com/).
 
 The following scheme represents all these files.
+
+<img src="img/architecture.png" width="500" height="400" />
+
+A full demo: 
 
 <img src="bot.gif" width="300" height="550" />
 
