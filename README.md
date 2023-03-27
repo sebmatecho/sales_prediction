@@ -90,7 +90,7 @@ Final model was deployed and can be accessed through a Telegram chatbot. Besides
 
 The following scheme represents all these files.
 
-<img src="img/architecture.png" width="500" height="300" />
+<img src="img/architecture.png" width="500" height="250" />
 
 A full demo: 
 
